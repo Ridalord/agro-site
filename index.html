@@ -805,13 +805,13 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 	</div>
 <!-- //footer -->
 <div class="menu-pop">
-	<ul class="link-list">
+	<ul class="link-list" id="linkList">
 		<li class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
 			viewBox="0 0 16 16">
 			<path
 				d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
 		</svg></li>
-		<li class="active"><a href="index.html">Home</a></li>
+		<li class="active"><a href="#">Home</a></li>
 		<li><a href="#aboutUs">About Us</a></li>
 		<li><a href="#services">Services</a></li>
 		<li><a href="#gallery">Gallery</a></li>
@@ -928,6 +928,48 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 								
 			});
 	</script>
+	<script type="text/javascript">
+		const menuBtn = document.querySelector(".shy-menu-hamburger")
+		const menuPop = document.querySelector(".menu-pop")
+		const closeBtn = document.querySelector(".close-btn")
+		if (menuBtn) {
+			//console.log("seen")
+			menuBtn.addEventListener("click", (e) => {
+				e.preventDefault();
+				//console.log("clicked")
+				menuPop.style.display = "block"
+			})
+			closeBtn.addEventListener("click", (e) => {
+				e.preventDefault();
+				menuPop.style.display = "none"
+			})
+		}
+		// Get the link list element
+			const linkList = document.getElementById('linkList');
+
+			// Get all the links within the link list
+			const links = linkList.getElementsByTagName('a');
+
+			// Add click event listener to each link
+			for (let i = 0; i < links.length; i++) {
+				links[i].addEventListener('click', () => {
+					//console.log('clicked')
+					// Hide the menu-pop after a link is clicked
+					document.querySelector('.menu-pop').style.display = 'none';
+				});
+			}
+
+			// Add scroll event listener to hide the menu-pop when the page scrolls
+			window.addEventListener('scroll', (e) => {
+				e.preventDefault();
+				// Hide the menu-pop
+				//console.log("scrolled")
+				document.querySelector('.menu-pop').style.display = 'none';
+			});
+
+			//console.log("seen")
+	</script>
+
 <!-- //here ends scrolling icon -->
 </body>
 

@@ -115,6 +115,39 @@ a.w3_agile_vimeo:hover{
   transition: all .4s cubic-bezier(.1,.7,.3,1);
 }
 
+.menu-pop {
+	position: fixed;
+	display: none;
+	height: 100vh;
+	top: 0;
+	width: 100%;
+	background-color: #0000009c;
+	z-index: 1000000;
+}
+
+.link-list {
+	text-align: center;
+	padding-top: 5vh;
+}
+
+.link-list li {
+	margin-bottom: 10px !important;
+}
+
+.link-list li a {
+	font-size: 20px;
+	font-weight: 700;
+	color: white !important;
+}
+
+.link-list .close-btn {
+	color: white !important;
+} 
+
+.link-list li a:hover {
+	color: #a4dd25 !important;
+}
+
 .shy-menu-panel ul {
 	text-align: center;
 }

@@ -173,7 +173,7 @@ a.w3_agile_vimeo:hover{
 /*** Hamburger ***/
 .shy-menu-hamburger {
 	position: relative;
-    display: block;
+    /* display: block; */
     overflow: hidden;
     cursor: pointer;
     float: right;
@@ -1909,6 +1909,9 @@ h2.typoh2{
 	.wthree_welcome_bottom_left {
 		padding: 2.5em 3em 0;
 	}
+	.shy-menu-hamburger {
+		display: none;
+	}
 }
 @media (max-width:1366px){
 	.banner {
@@ -2123,6 +2126,7 @@ h2.typoh2{
 	}
 	.shy-menu-panel ul {
 		text-align: left;
+		display: none;
 	}
 	.agileits_banner_bottom_left, .agileits_banner_bottom_left1, .agileits_banner_bottom_left2 {
 		float: left;
@@ -2377,6 +2381,9 @@ h2.typoh2{
 	.agile_testimonials_grid_right h5 {
 		font-size: 1.3em;
 	}
+	.shy-menu-hamburger {
+		display: block !important;
+	}
 }
 @media (max-width: 667px){
 	.wthree_welcome_bottom_left {
@@ -2614,6 +2621,7 @@ h2.typoh2{
 	.shy-menu-panel ul {
 		text-align: center;
 		padding: 3.5em 0 1em;
+		display: none !important;
 	}
 	.w3_banner_info_grid ul li a {
 		padding: 7px 30px;
